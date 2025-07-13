@@ -363,6 +363,7 @@
 
         <script>
 let check123="";
+            let full=false
             let texts=""
             async function gettexts() {
                 texts= await fetch("https://raw.githubusercontent.com/Varchasva123/files/refs/heads/main/text.txt")
@@ -539,6 +540,18 @@ let check123="";
             }, 1050);
           });
         });
+            let button = document.getElementById("button")
+            document.querySelector('#button').addEventListener('click', () => {
+                if (!full){
+  document.documentElement.requestFullscreen();
+                    button.src="https://github.com/Varchasva123/files/blob/main/Exit_full-removebg-preview.png?raw=true"
+                }
+                else{
+                    document.documentElement.exitFullscreen();
+                    button.src="https://github.com/Varchasva123/files/blob/main/image-remove-bg-preview.png?raw=true
+                }
+});
+        
         let sheet = document.styleSheets[1];
         window.addEventListener('load',sizes);
         window.addEventListener('resize',sizes);
