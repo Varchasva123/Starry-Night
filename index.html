@@ -303,7 +303,7 @@
         </style>
     </head>
     <body>
-            <audio loop autoplay style="display:none;" controls="false">
+            <audio loop muted autoplay style="display:none;" id="aud" controls="false">
                 <source  src="https://cdn.pixabay.com/audio/2025/04/30/audio_b6992e3816.mp3" type="audio/mp3">
             </audio>
             <div id="left"><div id="left1">
@@ -395,6 +395,11 @@ let check123="";
         }, 200);
     }
 }
+            window.addEventListener('click', ()=>{
+                let audio = document.getElementById('aud');
+                audio.muted=false;
+                audio.play();
+            },{once:true});
             let righth = document.querySelector('.right');
         const svg = document.getElementById("svg");
         const left = document.getElementById("left");
