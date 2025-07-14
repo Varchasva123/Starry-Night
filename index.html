@@ -544,25 +544,13 @@ let check123="";
             let button = document.getElementById("button")
             document.querySelector('#button').addEventListener('click', () => {
                 if (!full){
-                    if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.webkitRequestFullscreen) { /* Safari */
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) { /* IE11 */
-    elem.msRequestFullscreen();
-  }
+                  
     document.getElementById("root").requestFullscreen({ navigationUI: "hide" });
                     button.src="https://github.com/Varchasva123/files/blob/main/Exit_full-removebg-preview.png?raw=true"
                     full=true;
                 }
                 else{
-                    if (document.exitFullscreen) {
     document.exitFullscreen();
-  } else if (document.webkitExitFullscreen) { /* Safari */
-    document.webkitExitFullscreen();
-  } else if (document.msExitFullscreen) { /* IE11 */
-    document.msExitFullscreen();
-  }document.exitFullscreen();
                     button.src="https://github.com/Varchasva123/files/blob/main/image-removebg-preview.png?raw=true"
                     full=false;
                 }
