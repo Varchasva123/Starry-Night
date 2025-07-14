@@ -130,7 +130,7 @@
                 100% {opacity: 50%;}
             }
             .basic-p{
-                height: 45dvh;
+                height: 48dvh;
                 width: 80vw;
                 margin-top: 45dvh;
                 margin-left: 10vw;
@@ -153,7 +153,7 @@
                 margin-left: 65vw;
             }
             .basic-l-star{
-                height: 45dvh;
+                height: 48dvh;
                 margin-top: 2dvh;
             }
             .line{
@@ -162,7 +162,7 @@
                 animation-iteration-count: infinite;
                 animation-timing-function: ease-in-out;}
             .phone-p-div{
-                height: 45dvh ;
+                height: 48dvh ;
                 width: 80vw ;
                 margin-top: 45dvh ;
                 margin-left: 10vw ;
@@ -175,7 +175,7 @@
                 transform: scale(1.07);
                 margin-top: 1dvh ;}
             .sphone-p-div{
-                height: 45dvh  ;
+                height: 48dvh  ;
                 width: 80vw ;
                 margin-top: 45dvh ;
                 margin-left: 10vw ;
@@ -263,7 +263,7 @@
                 margin-left: 68vw ;
             }
             .laptop-star{
-                height: 45dvh ;
+                height: 48dvh ;
                 margin: auto ;
                 margin-top: 1dvh ;
             }
@@ -551,6 +551,7 @@ let check123="";
   } else if (elem.msRequestFullscreen) { /* IE11 */
     elem.msRequestFullscreen();
   }
+    document.getElementById("root").requestFullscreen({ navigationUI: "hide" });
                     button.src="https://github.com/Varchasva123/files/blob/main/Exit_full-removebg-preview.png?raw=true"
                     full=true;
                 }
@@ -561,7 +562,7 @@ let check123="";
     document.webkitExitFullscreen();
   } else if (document.msExitFullscreen) { /* IE11 */
     document.msExitFullscreen();
-  }
+  }document.exitFullscreen();
                     button.src="https://github.com/Varchasva123/files/blob/main/image-removebg-preview.png?raw=true"
                     full=false;
                 }
@@ -584,7 +585,7 @@ let check123="";
                 right.classList.add("phone-p-div");
                 svg.classList.add("phone-p-star");
                 righth = document.querySelector('.phone-p-div');
-                height = 45;
+                height = 48;
                 right.style.setProperty('--height', height + 'dvh');
                 right1.style.setProperty('--height', height + 'dvh');
                 overlap=true;
@@ -618,7 +619,7 @@ let check123="";
                 right.classList.add("sphone-p-div");
                 svg.classList.add("sphone-p-star");
                 righth = document.querySelector('.sphone-p-div');
-                height = 45;
+                height = 48;
                 right.style.setProperty('--height', height + 'dvh');
                 right1.style.setProperty('--height', height + 'dvh');
                 overlap=true;
@@ -778,7 +779,7 @@ let check123="";
                 right.classList.remove("basic-l-right");
                 svg.classList.remove("basic-l-star");
                 righth = document.querySelector('.basic-p');
-                height = 45;
+                height = 48;
                 right.style.setProperty('--height', height + 'dvh');
                 right1.style.setProperty('--height', height + 'dvh');
                 overlap=true;
