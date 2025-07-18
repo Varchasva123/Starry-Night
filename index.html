@@ -44,7 +44,15 @@
                 overflow: visible;
                 margin:0;
                 padding:0;
-                position: relativej;
+                position: relative;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+                top:env(safe-area-inset-top);
+                bottom:env(safe-area-inset-bottom);
+                left:env(safe-area-inset-left);
+                right:env(safe-area-inset-right);
             }
             @keyframes twinkle{
                 0% {opacity: 100%; transform: scale(0.75);}
