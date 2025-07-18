@@ -8,51 +8,27 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <style>
-            body,html{
-                min-height: 100dvh;
-                min-width: 100dvw;
-                margin:0;
-                padding:0;
-                inset:0;
-                z-index: -20;
-    padding-top: env(safe-area-inset-top);
-    padding-bottom: env(safe-area-inset-bottom);
-    padding-left: env(safe-area-inset-left);
-    padding-right: env(safe-area-inset-right);
-                top:env(safe-area-inset-top);
-                bottom:env(safe-area-inset-bottom);
-                left:env(safe-area-inset-left);
-                right:env(safe-area-inset-right);
-            }
-            @supports(padding: env(safe-area-inset-top)) {
-  body,html {
-    padding-top: env(safe-area-inset-top);
-    padding-bottom: env(safe-area-inset-bottom);
-    padding-left: env(safe-area-inset-left);
-    padding-right: env(safe-area-inset-right);
-  }
-}
-            #bg{
+            body{
                 background-image: url("https://github.com/Varchasva123/files/blob/main/background.gif?raw=true");
                 background-repeat: no-repeat;
                 background-attachment:fixed;
                 background-position: center;
-                background-size: var(--bg);
+                background-size: cover;
                 filter: brightness(1.1);
-                min-height: 100%;
-                min-width: 100%;
                 overflow: visible;
                 margin:0;
                 padding:0;
                 position: relative;
-    padding-top: env(safe-area-inset-top);
-    padding-bottom: env(safe-area-inset-bottom);
-    padding-left: env(safe-area-inset-left);
-    padding-right: env(safe-area-inset-right);
-                top:env(safe-area-inset-top);
-                bottom:env(safe-area-inset-bottom);
-                left:env(safe-area-inset-left);
-                right:env(safe-area-inset-right);
+                min-height: 100dvh;
+                min-width: 100dvw;
+                inset:0;
+                z-index: -10;
+                --safe-area-inset-top: env(safe-area-inset-top);
+  --safe-area-inset-bottom: env(safe-area-inset-bottom);
+                --sleft:env(safe-area-inset-right);
+                --sright:env(safe-area-inset-left);
+  height: calc(100dvh + (var(--safe-area-inset-top) + var(--safe-area-inset-bottom)));
+                width: calc(100dvw + (var(--sleft) + var(--sright)));
             }
             @keyframes twinkle{
                 0% {opacity: 100%; transform: scale(0.75);}
@@ -348,7 +324,6 @@
         </style>
     </head>
     <body>
-        <div id="bg">
         <img src="https://github.com/Varchasva123/files/blob/main/image-removebg-preview.png?raw=true" id="button">
             <audio loop muted autoplay style="display:none;" id="aud" controls="false">
                 <source  src="https://cdn.pixabay.com/audio/2025/04/30/audio_b6992e3816.mp3" type="audio/mp3">
@@ -397,11 +372,9 @@
                 <line style="animation-delay: 1.7s;"class="line" x1="130" y1="465" x2="425" y2="595" stroke-width="3" stroke="white"></line>
                 <line style="animation-delay: 2.6s;"class="line" x1="430" y1="595" x2="480" y2="745" stroke-width="3" stroke="white"></line>
             </svg>
-        </div>
+  
 </div>
         <script>
-            bg=document.getElementById("bg");
-            bg.style.setProperty("--bg","cover")
 let check123="";
             let full=false
             let texts=""
