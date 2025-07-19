@@ -14,11 +14,7 @@
                 display:none;
             }
             #body{
-                background-image: url("https://github.com/Varchasva123/files/blob/main/background.gif?raw=true");
-                background-repeat: no-repeat;
-                background-attachment:fixed;
-                background-position: center;
-                background-size: var(--bgs);
+                background-color:red;
                 filter: brightness(1.1);
                 overflow: visible;
                 margin:0;
@@ -591,13 +587,7 @@ let check123="";
         window.addEventListener('load',sizes);
         window.addEventListener('resize',sizes);
         function sizes() {
-            sizeval=(document.getElementById("body").offsetWidth/1.978 + document.getElementById("values").offsetWidth/1.978 +document.getElementById("values").offsetHeight/1.978)
-            if (sizeval>=document.getElementById("body").offsetHeight){
-                document.getElementById("body").style.setProperty('--bgs','auto '+sizeval+'px')
-            }
-            else {
-                document.getElementById("body").style.setProperty("--bgs","cover")
-            }
+           
             let class1 =false;
             let w = window.innerWidth;
             let h = window.innerHeight;
