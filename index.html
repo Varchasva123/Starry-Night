@@ -12,7 +12,7 @@
                 background-repeat: no-repeat; 
                 background-attachment:fixed; 
                 background-position: center;
-                background-size:cover;
+                background-size: var(--bgs);
                 filter: brightness(1.1);
                 overflow: visible;
                 margin:0;
@@ -595,8 +595,8 @@ let check123="";
                     document.getElementById("body").style.setProperty("--bgs","cover")
                 }}
                 
-            if (sizeval<h) {
-                document.getElementById("body").style.setProperty("--bgs",w+"px auto")
+            if (w>h*1.978) {
+                document.getElementById("body").style.setProperty("--bgs","100dvw auto")
             }
             if (w<h) {
                 sizeval=document.getElementById("body").offsetHeight
