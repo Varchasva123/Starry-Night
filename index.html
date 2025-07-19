@@ -12,7 +12,7 @@
                 background-repeat: no-repeat; 
                 background-attachment:fixed; 
                 background-position: center;
-                background-size: var(--bgs);
+                background-size: cover;
                 filter: brightness(1.1);
                 overflow: visible;
                 margin:0;
@@ -585,23 +585,10 @@ let check123="";
         window.addEventListener('resize',sizes);
         function sizes() {
             let class1 =false;
-            let w = document.getElementById("body").offsetWidth;
-            let h = document.getElementById("body").offsetHeight;
+            let w = window.innerWidth;
+            let h = window.innerHeight;
 
-            if (w>h) {
-                sizeval=document.getElementById("body").offsetWidth/1.978
-                document.getElementById("body").style.setProperty("--bgs","auto "+sizeval+"px")
-                if (sizeval<h){
-                    document.getElementById("body").style.setProperty("--bgs","cover")
-                }}
-                
-            if (w>h*1.978) {
-                document.getElementById("body").style.setProperty("--bgs","100dvw auto")
-            }
-            if (w<h) {
-                sizeval=document.getElementById("body").offsetHeight
-                document.getElementById("body").style.setProperty("--bgs","auto "+sizeval+"px")
-            }
+           
             if( w>=3000){
                 w=w/4;
                 h=h/4;
