@@ -595,8 +595,8 @@ let check123="";
                     document.getElementById("body").style.setProperty("--bgs","cover")
                 }}
                 
-            if (w>h*1.978) {
-                document.getElementById("body").style.setProperty("--bgs","100dvw auto")
+            if (sizeval<h) {
+                document.getElementById("body").style.setProperty("--bgs",w+"px auto")
             }
             if (w<h) {
                 sizeval=document.getElementById("body").offsetHeight
