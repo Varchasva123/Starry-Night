@@ -144,7 +144,7 @@
             .basic-p{
                 height: 48dvh;
                 width: 80dvw;
-                margin-top: 45dvh;
+                margin-top: 47dvh;
                 margin-left: 10dvw;
             }
             .basic-p-star{
@@ -176,7 +176,7 @@
             .phone-p-div{
                 height: 48dvh ;
                 width: 80dvw ;
-                margin-top: 45dvh ;
+                margin-top: 47dvh ;
                 margin-left: 10dvw ;
             }
             .phone-p-star{
@@ -189,7 +189,7 @@
             .sphone-p-div{
                 height: 48dvh  ;
                 width: 80dvw ;
-                margin-top: 45dvh ;
+                margin-top: 47dvh ;
                 margin-left: 10dvw ;
             }
             .sphone-p-star{
@@ -594,7 +594,11 @@ let check123="";
                 if (sizeval<h){
                     document.getElementById("body").style.setProperty("--bgs","cover")
                 }}
-            if(w<h){
+                
+            if (w>h*1.978) {
+                document.getElementById("body").style.setProperty("--bgs","100dvw auto")
+            }
+            if (w<h) {
                 sizeval=document.getElementById("body").offsetHeight
                 document.getElementById("body").style.setProperty("--bgs","auto "+sizeval+"px")
             }
