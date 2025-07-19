@@ -381,8 +381,6 @@
 </div>
         <div id="values"></div>
         <script>
-            sizeval=(100 + document.getElementById("values").offsetWidth/document.getElementById("body").offsetWidth*100+document.getElementById("values").offsetHeight/document.getElementById("body").offsetHeight*100)
-            document.getElementById("body").style.setProperty('--bgs',sizeval+'dvh')
 let check123="";
             let full=false
             let texts=""
@@ -593,6 +591,8 @@ let check123="";
         window.addEventListener('load',sizes);
         window.addEventListener('resize',sizes);
         function sizes() {
+            sizeval=(document.getElementById("body").offsetWidth/1.983 + document.getElementById("values").offsetWidth/1.983 +document.getElementById("values").offsetHeight/1.983)
+            document.getElementById("body").style.setProperty('--bgs',sizeval+'dvw')
             let class1 =false;
             let w = window.innerWidth;
             let h = window.innerHeight;
