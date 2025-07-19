@@ -1,28 +1,38 @@
 <html>
     <head>
         <title>Starry Night</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+        <meta name="viewport" content="width=device-width, minimal-ui"> <!-- remove this line if issue-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <style>
-            html, body{
-                background-image: url("https://github.com/Varchasva123/files/blob/main/background.gif?raw=true"); 
-                background-repeat: no-repeat; 
-                background-attachment:fixed; 
+            body{
+                background-image: url("https://github.com/Varchasva123/files/blob/main/background.gif?raw=true");
+                background-repeat: no-repeat;
+                background-attachment:fixed;
                 background-position: center;
-                background-size:cover;
-                filter: brightness(1.1);
                 overflow: visible;
+                background-size: cover;
+                z-index: -1;
+                filter: brightness(1.1);
+                height: 100dvh;
+                width: 100dvw;
                 margin:0;
-                padding:0;
-                position: relative;
-                min-height: 100dvh;
-                min-width: 100dvw;
-                inset:0;
-                z-index: 0;
+                overflow:hidden;
+
             }
+            @supports(padding: env(safe-area-inset-top)) {
+  body {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+}
+
             @keyframes twinkle{
                 0% {opacity: 100%; transform: scale(0.75);}
                 25% {opacity: 100%; transform: scale(1);}
@@ -47,7 +57,7 @@
                 filter:drop-shadow(0 0 15px white);
                 z-index: 10;
                 overflow: visible;
-                
+
             }
             #s1{
                 animation-delay: 1.2s;
@@ -138,7 +148,7 @@
             .basic-p{
                 height: 48dvh;
                 width: 80dvw;
-                margin-top: 47dvh;
+                margin-top: 45dvh;
                 margin-left: 10dvw;
             }
             .basic-p-star{
@@ -170,7 +180,7 @@
             .phone-p-div{
                 height: 48dvh ;
                 width: 80dvw ;
-                margin-top: 47dvh ;
+                margin-top: 45dvh ;
                 margin-left: 10dvw ;
             }
             .phone-p-star{
@@ -183,7 +193,7 @@
             .sphone-p-div{
                 height: 48dvh  ;
                 width: 80dvw ;
-                margin-top: 47dvh ;
+                margin-top: 45dvh ;
                 margin-left: 10dvw ;
             }
             .sphone-p-star{
@@ -316,7 +326,7 @@
     }
         </style>
     </head>
-    <body id="body">
+    <body>
         <img src="https://github.com/Varchasva123/files/blob/main/image-removebg-preview.png?raw=true" id="button">
             <audio loop muted autoplay style="display:none;" id="aud" controls="false">
                 <source  src="https://cdn.pixabay.com/audio/2025/04/30/audio_b6992e3816.mp3" type="audio/mp3">
@@ -365,8 +375,8 @@
                 <line style="animation-delay: 1.7s;"class="line" x1="130" y1="465" x2="425" y2="595" stroke-width="3" stroke="white"></line>
                 <line style="animation-delay: 2.6s;"class="line" x1="430" y1="595" x2="480" y2="745" stroke-width="3" stroke="white"></line>
             </svg>
-  
-</div>
+        </div>
+
         <script>
 let check123="";
             let full=false
@@ -386,7 +396,7 @@ let check123="";
             let overlap="";
             let height="";
             gettexts()
-    
+
         function checkhr(callback) {
     if (right.offsetHeight == "0") {
         if (hr==true){
@@ -399,7 +409,7 @@ let check123="";
     }}
 
         function checkhl(callback) {
-        
+
     if (left.offsetHeight == "0") {
         if (hl==true){
         callback();  // run next stuff
@@ -423,7 +433,7 @@ let check123="";
         const right = document.getElementById("right");
 
           document.querySelectorAll('.star').forEach(function(star) {
-            
+
             hr=false
             hl=false
           let isHovering = false;
@@ -548,7 +558,7 @@ let check123="";
         });
             let elem=document.documentElement;
             let button = document.getElementById("button")
-        
+
             document.querySelector('#button').addEventListener('click', () => {
                 if (!full){
                     if (elem.requestFullscreen) {
@@ -572,8 +582,8 @@ let check123="";
                     full=false;
                 }
 });
-            
-        
+
+
         let sheet = document.styleSheets[1];
         window.addEventListener('load',sizes);
         window.addEventListener('resize',sizes);
@@ -581,7 +591,7 @@ let check123="";
             let class1 =false;
             let w = window.innerWidth;
             let h = window.innerHeight;
-            
+
             if( w>=3000){
                 w=w/4;
                 h=h/4;
@@ -813,17 +823,11 @@ let check123="";
             rule.style.fontSize ="3.5dvh";
             }}
             }}console.log(overlap);
-            text_l=""
-                left.classList.add("close");
-                left.classList.remove("open");
-                hl=false;
-                text_r=""
-                right.classList.add("close");
-                right.classList.remove("open");
-                hr=false;
-            isHovering = false;
         }        
-        
         </script>
     </body>
-    </html>
+</html>
+
+
+
+
