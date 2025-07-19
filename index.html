@@ -592,7 +592,12 @@ let check123="";
         window.addEventListener('resize',sizes);
         function sizes() {
             sizeval=(document.getElementById("body").offsetWidth/1.978 + document.getElementById("values").offsetWidth/1.978 +document.getElementById("values").offsetHeight/1.978)
-            document.getElementById("body").style.setProperty('--bgs',sizeval+'px')
+            if (sizeval>=document.getElementById("body").offsetHeight){
+                document.getElementById("body").style.setProperty('--bgs',sizeval+'px')
+            }
+            else {
+                document.getElementById("body").style.setProperty.backgroundSize("cover")
+            }
             let class1 =false;
             let w = window.innerWidth;
             let h = window.innerHeight;
