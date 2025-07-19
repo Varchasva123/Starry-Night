@@ -594,7 +594,7 @@ let check123="";
                 if (sizeval<h){
                     document.getElementById("body").style.setProperty("--bgs","cover")
                 }}
-            else {
+            if(w<h){
                 sizeval=document.getElementById("body").offsetHeight
                 document.getElementById("body").style.setProperty("--bgs","auto"+sizeval+"px")
             }
