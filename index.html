@@ -10,6 +10,8 @@
             #values{
                 height: env(safe-area-inset-left);
                 width:env(safe-area-inset-right);
+                position: absolute;
+                display:none;
             }
             #body{
                 background-image: url("https://github.com/Varchasva123/files/blob/main/background.gif?raw=true");
@@ -377,6 +379,7 @@
             </svg>
   
 </div>
+        <div id="values"></div>
         <script>
             sizeval=(100 + document.getElementById("values").offsetWidth/document.getElementById("body").offsetWidth*100+document.getElementById("values").offsetHeight/document.getElementById("body").offsetHeight*100)
             document.getElementById("body").style.setProperty('--bgs',sizeval+'dvh')
